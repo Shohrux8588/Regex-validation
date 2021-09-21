@@ -12,7 +12,6 @@ const patters = {
 function check(e) {
     const regex = patters[e.target.name];
     const characters = e.target.value;
-    console.log(regex, characters);
     if (regex.test(characters)) {
         e.target.className = "valid";
     } else {
@@ -23,4 +22,3 @@ function check(e) {
 inputs.forEach(input => {
     input.addEventListener("input", check);
 })
-
